@@ -4,44 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn more about Vanshita Rathod, a passionate web developer.">
-    <title>About - VANSHITA RATHOD</title>
-   <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="about.css">
-
+    <title>About - Vanshita Rathod</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <h1>VANSHITA RATHOD</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <!-- About Section -->
-    <section id="about">
-        <img src="your-profile-image.jpg" alt="VANSHITA RATHOD">
-        <h2>About Me</h2>
-        <p>
-            Hi, I'm Vanshita Rathod, a passionate web developer with a knack for creating interactive and user-friendly websites.
-            My journey in web development started with a curiosity about how websites work, and it has turned into a full-blown
-            passion for coding and design. I specialize in front-end development, ensuring every design comes to life with precision.
-        </p>
-        <p>
-            With expertise in HTML, CSS, JavaScript, and frameworks like React, I aim to build solutions that solve real-world problems.
-            When I'm not coding, I enjoy exploring design trends, sketching, and learning about emerging technologies.
-        </p>
+    <section id="about" class="container">
+        <img src="your-profile-image.jpg" alt="Vanshita Rathod" style="animation: bounceIn 2s;">
+        <h2 style="animation: fadeIn 2s;">About Me</h2>
+        <p style="animation: fadeIn 3s;">Hi, I'm Vanshita Rathod, a passionate web developer with a knack for creating interactive and user-friendly websites. My journey in web development started with a curiosity about how websites work, and it has turned into a full-blown passion for coding and design. I specialize in front-end development, ensuring every design comes to life with precision.</p>
+        <p style="animation: fadeIn 4s;">With expertise in HTML, CSS, JavaScript, and frameworks like React, I aim to build solutions that solve real-world problems. When I'm not coding, I enjoy exploring design trends, sketching, and learning about emerging technologies.</p>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 VANSHITA RATHOD. All rights reserved.</p>
-    </footer>
+    <div id="footer"></div>
+
+    <script>
+        // Include Header and Footer using JavaScript
+        document.getElementById('header').innerHTML = fetch('header.html').then(response => response.text());
+        document.getElementById('footer').innerHTML = fetch('footer.html').then(response => response.text());
+    </script>
 </body>
 </html>
