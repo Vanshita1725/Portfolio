@@ -3,68 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Vanshita Rathod</title>
+    <title>Vanshita Rathod - Web Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header">
-        <nav class="navbar">
-            <a href="#" class="logo">Vanshita Rathod</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Include Header -->
+    <div id="header-container"></div>
+
     <main>
         <section id="hero">
-            <h1>Hi, I'm Vanshita Rathod</h1>
-            <p>A Passionate Web Developer</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi, I'm <strong>Vanshita Rathod</strong>, a passionate web developer specializing in creating dynamic and responsive websites.</p>
+            <a href="projects.html" class="btn">View My Projects</a>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a web developer specializing in building modern, responsive, and user-friendly web applications. My passion lies in solving complex problems and delivering exceptional user experiences.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>MySQL</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Project Name 1</h3>
-                <p>Brief description of the project.</p>
-                <a href="#" class="btn">View Project</a>
+
+        <section id="quick-links">
+            <div class="link-card">
+                <h3><a href="about.html">About Me</a></h3>
+                <p>Learn more about my journey as a web developer.</p>
             </div>
-            <div class="project-card">
-                <h3>Project Name 2</h3>
-                <p>Brief description of the project.</p>
-                <a href="#" class="btn">View Project</a>
+            <div class="link-card">
+                <h3><a href="skills.html">Skills</a></h3>
+                <p>Explore my technical expertise and toolset.</p>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
+            <div class="link-card">
+                <h3><a href="projects.html">Projects</a></h3>
+                <p>Take a look at some of my most exciting work.</p>
+            </div>
+            <div class="link-card">
+                <h3><a href="contact.html">Contact</a></h3>
+                <p>Get in touch with me for collaborations or inquiries.</p>
+            </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Vanshita Rathod. All rights reserved.</p>
-    </footer>
+
+    <!-- Include Footer -->
+    <div id="footer-container"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
