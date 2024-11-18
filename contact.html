@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page of Vanshita Rathod, web developer.">
     <title>Contact - Vanshita Rathod</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-    <!-- Include Header -->
-    <div id="header-container"></div>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <main>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 style="animation: fadeIn 2s;">Contact Me</h2>
+        <form action="#" method="post" style="animation: fadeIn 3s;">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-    <!-- Include Footer -->
-    <div id="footer-container"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-    <script src="script.js"></script>
+    <script>
+        // Include Header and Footer using JavaScript
+        document.getElementById('header').innerHTML = fetch('header.html').then(response => response.text());
+        document.getElementById('footer').innerHTML = fetch('footer.html').then(response => response.text());
+    </script>
 </body>
 </html>
