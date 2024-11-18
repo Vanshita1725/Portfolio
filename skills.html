@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills of Vanshita Rathod, web developer specializing in front-end development.">
     <title>Skills - Vanshita Rathod</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="skills.css">
 </head>
 <body>
-    <!-- Include Header -->
-    <div id="header-container"></div>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <main>
-        <section id="skills">
-            <h2>My Skills</h2>
-            <ul class="skills-list">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>MySQL</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <h2 style="animation: fadeIn 2s;">Skills</h2>
+        <div class="skill-card" style="animation: fadeIn 3s;">
+            <h3>HTML</h3>
+            <p>Expert in crafting semantic and accessible HTML code.</p>
+        </div>
+        <div class="skill-card" style="animation: fadeIn 4s;">
+            <h3>CSS</h3>
+            <p>Skilled in designing responsive and visually appealing websites.</p>
+        </div>
+        <div class="skill-card" style="animation: fadeIn 5s;">
+            <h3>JavaScript</h3>
+            <p>Experienced in writing interactive and dynamic scripts for websites.</p>
+        </div>
+    </section>
 
-    <!-- Include Footer -->
-    <div id="footer-container"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-    <script src="script.js"></script>
+    <script>
+        // Include Header and Footer using JavaScript
+        document.getElementById('header').innerHTML = fetch('header.html').then(response => response.text());
+        document.getElementById('footer').innerHTML = fetch('footer.html').then(response => response.text());
+    </script>
 </body>
 </html>
