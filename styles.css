@@ -1,113 +1,152 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 1rem;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
+/* Hero Section */
 #hero {
     text-align: center;
     padding: 5rem 1rem;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: #fff;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    animation: slideInFromBottom 1s ease-in-out;
 }
 
 #hero .btn {
     background: #fff;
     color: #333;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 #hero .btn:hover {
     background: #ccc;
+    transform: scale(1.1);
+    color: #000;
 }
 
-section {
-    padding: 2rem 1rem;
+/* Quick Links Section */
+#quick-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
     max-width: 1100px;
-    margin: auto;
-}
-
-.skills-list {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.skills-list li {
-    background: #f4f4f4;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.project-card {
-    background: #f4f4f4;
-    margin: 1rem 0;
     padding: 1rem;
-    border-radius: 5px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-.project-card .btn {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.project-card .btn:hover {
-    background: #555;
-}
-
-footer {
+.link-card {
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 10px;
     text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
-    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link-card h3 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.link-card h3 a:hover {
+    color: #0073e6;
+}
+
+.link-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    #hero .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    #quick-links {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    #hero p {
+        font-size: 0.9rem;
+    }
+    #hero .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+    #quick-links {
+        grid-template-columns: 1fr;
+    }
 }
