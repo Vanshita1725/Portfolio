@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Vanshita Rathod, web developer.">
     <title>Projects - Vanshita Rathod</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-    <!-- Include Header -->
-    <div id="header-container"></div>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <main>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Project Name 1</h3>
-                <p>Brief description of the project goes here.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Project Name 2</h3>
-                <p>Brief description of the project goes here.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Project Name 3</h3>
-                <p>Brief description of the project goes here.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-        </section>
-    </main>
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2 style="animation: fadeIn 2s;">Projects</h2>
+        <div class="project-card" style="animation: fadeIn 3s;">
+            <h3>Project One</h3>
+            <p>Description of project one goes here...</p>
+        </div>
+        <div class="project-card" style="animation: fadeIn 4s;">
+            <h3>Project Two</h3>
+            <p>Description of project two goes here...</p>
+        </div>
+    </section>
 
-    <!-- Include Footer -->
-    <div id="footer-container"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-    <script src="script.js"></script>
+    <script>
+        // Include Header and Footer using JavaScript
+        document.getElementById('header').innerHTML = fetch('header.html').then(response => response.text());
+        document.getElementById('footer').innerHTML = fetch('footer.html').then(response => response.text());
+    </script>
 </body>
 </html>
